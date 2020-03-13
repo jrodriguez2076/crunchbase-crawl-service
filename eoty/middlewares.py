@@ -25,7 +25,7 @@ class EotySpiderMiddleware(object):
         # middleware and into the spider.
         if response.status >= 400:
             try:
-                Ranking = -1        
+                Ranking = None        
                 filename = 'ranks.txt'
                 with open(filename, 'a') as f:
                     f.write('%d \n' % Ranking)
