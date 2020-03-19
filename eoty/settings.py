@@ -27,7 +27,7 @@ CONCURRENT_REQUESTS = 1
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 5
+DOWNLOAD_DELAY = 2
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -54,8 +54,8 @@ DOWNLOAD_DELAY = 5
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     'eoty.middlewares.EotyDownloaderMiddleware': 543,
-    # 'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
-    # 'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+    'rotating_proxies.middlewares.RotatingProxyMiddleware': 610,
+    'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
 }
 
 DOWNLOADER_MIDDLEWARES.update({
@@ -146,15 +146,7 @@ USER_AGENTS = [
      ('Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'),
 ]
 
-ROTATING_PROXY_LIST = ['189.240.124.61:8080',
-                        '5.44.107.147:3128',
-                        '144.91.95.95:8118',
-                        '144.91.71.141:8080',
-                        '139.162.20.119:8080',
-                        '118.174.211.220:11', 
-                        '52.230.6.90:8080',
-                        '23.237.173.102:3128',
-                        '208.113.132.249:3128',
+ROTATING_PROXY_LIST = ['118.174.220.152:31701', '210.5.106.202:37020', '195.144.219.155:54857', '186.86.247.169:39168', '212.28.224.6:8080', '43.248.24.157:51166', '181.114.63.129:8085', '111.95.23.166:3128', '194.143.151.96:39072', '36.89.182.225:32917', '97.107.130.114:8901', '190.157.247.65:53281', '45.113.192.180:8080', '209.97.164.211:47503', '154.127.120.18:30280', '101.51.141.49:57977', '128.199.188.231:47503', '181.129.140.226:47524', '36.67.66.202:55638', '43.248.24.158:51166', '197.211.238.220:54675', '177.94.206.67:60666', '36.89.180.103:52092', '103.83.99.69:3128', '181.211.245.74:44267'
                         ]
 
 # Enable or disable extensions
