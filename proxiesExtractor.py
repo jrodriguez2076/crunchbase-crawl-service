@@ -12,5 +12,5 @@ def get_proxies():
             proxies.append(proxy)
     return proxies
 
-# proxies = get_proxies()
-# print(proxies)
+proxies = get_proxies()
+print(proxies)
