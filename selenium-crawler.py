@@ -9,7 +9,7 @@ import random
 # proxy_list = get_proxies()
 
 companies = []
-filename = 'FinalCrunchbaseDataset-selenium-761-963.csv' #### CHANGE THIS FOR REAL FILENAME
+filename = 'FinalCrunchbaseDataset-7681.csv' #### CHANGE THIS FOR REAL FILENAME
 companies = pd.read_csv(filename)
 complete_urls = []
 for index, company in companies.iterrows():
