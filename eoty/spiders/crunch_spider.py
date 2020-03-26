@@ -10,6 +10,7 @@ import scrapy
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 import csv
+import sys
 
 import pandas as pd
 import numpy as np
@@ -19,7 +20,8 @@ class CrunchSpider(scrapy.Spider):
 
         def __init__(self, *args, **kwargs):
             self.companies = []
-            self.filename = 'FinalCrunchbaseDataset.csv' #### CHANGE THIS FOR REAL FILENAME
+            print(kwargs.get("filename"))
+            self.filename = kwargs.get("filename") #'FinalCrunchbaseDataset.csv' #### CHANGE THIS FOR REAL FILENAME
             self.companies = pd.read_csv(self.filename)
             complete_urls = []
 
