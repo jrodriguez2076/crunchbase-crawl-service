@@ -38,7 +38,7 @@ pytz==2019.3
 queuelib==1.5.0
 random-user-agent==1.0.1
 requests==2.23.0
-Scrapy==2.0.0
+Scrapy==2.5.1
 scrapy-rotating-proxies==0.6.2
 Scrapy-UserAgents==0.0.1
 selenium==3.141.0
