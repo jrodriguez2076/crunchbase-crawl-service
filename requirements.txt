@@ -20,7 +20,7 @@ isort==4.3.21
 lazy-object-proxy==1.4.3
 lxml==4.5.0
 mccabe==0.6.1
-numpy==1.18.1
+numpy==1.22.0
 pandas==1.0.1
 parsel==1.5.2
 Protego==0.1.16
